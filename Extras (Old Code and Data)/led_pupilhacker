@@ -1,0 +1,63 @@
+int whl=6;
+int whr=5;
+int wvl=9;
+int wvr=10;
+int ir=11;
+int il=3;
+int ic=13;
+int ig=2;
+
+
+void setup()
+{
+  pinMode(whl,OUTPUT);
+  pinMode(wvl,OUTPUT);
+  pinMode(ir,OUTPUT);
+  pinMode(il,OUTPUT);
+  pinMode(ic,OUTPUT);
+  pinMode(ig,OUTPUT);
+  pinMode(whr,OUTPUT);
+  pinMode(wvr,OUTPUT);
+  Serial.begin(9600);
+  digitalWrite(ig,LOW);
+  analogWrite(il,150);
+  analogWrite(ir,200);
+  analogWrite(ic,150);
+  Serial.print("0");
+  delay(10000);
+}
+
+
+void loop()
+{
+  analogWrite(whl,100);
+  analogWrite(wvl,100);
+  Serial.print("2");
+  delay(1000);
+  analogWrite(whl,0);
+  analogWrite(wvl,0);
+  Serial.print("0");
+  delay(3000);
+  analogWrite(whl,10);
+  Serial.print("1");
+  delay(1000);
+  analogWrite(whl,0);
+  Serial.print("0");
+  delay(3000);
+  analogWrite(whr,100);
+  analogWrite(wvr,100);
+  Serial.print("4");
+  delay(1000);
+  analogWrite(whr,0);
+  analogWrite(wvr,0);
+  Serial.print("0");
+  delay(3000);
+  analogWrite(whr,10);
+  Serial.print("3");
+  delay(1000);
+  analogWrite(whr,0);
+  Serial.print("0");
+  delay(3000);
+  
+}
+
