@@ -1,0 +1,7 @@
+#!/usr/bin/gnuplot
+set term png
+set output "output.png"
+plot 'radtime.csv' using 1:2 with lines, 'radtime.csv' using 1:3 with lines
+pause 2
+gcc Report.c -o Report -O2 -Wall -lhpdf -lpng -lz -lm -lstdc++
+pause 2
