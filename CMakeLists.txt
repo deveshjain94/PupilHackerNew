@@ -1,0 +1,5 @@
+cmake_minimum_required(VERSION 2.8)
+project( pupil )
+find_package( OpenCV REQUIRED )
+add_executable( pupil pupil.cpp )
+target_link_libraries( pupil ${OpenCV_LIBS} )
